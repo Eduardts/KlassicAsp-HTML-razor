@@ -1,4 +1,14 @@
-@page
+<!-- Single statement block  --> 
+@Code dim myMessage = "Hello World" End Code
+ 
+<!-- Inline expression or variable --> 
+<p>The value of myMessage is: @myMessage</p> 
+ 
+<!-- Multi-statement block --> 
+@Code
+dim greeting = "Welcome to our site!" 
+dim weekDay = DateTime.Now.DayOfWeek 
+dim greetingMessage = greeting & " Here in Huston it is: " & weekDay
+End Code
 
-<h1>Hello, world!</h1>
-<h2>The time on the server is @DateTime.Now</h2>
+<p>The greeting is: @greetingMessage</p>
