@@ -1,0 +1,23 @@
+To deploy:
+
+Set up the database:
+sql
+
+Copy
+CREATE TABLE Users (
+    UserID varchar(50) PRIMARY KEY,
+    Username varchar(50),
+    PasswordHash varchar(255)
+);
+
+CREATE TABLE ActivityLog (
+    LogID int IDENTITY(1,1) PRIMARY KEY,
+    ActivityType varchar(50),
+    Username varchar(50),
+    IPAddress varchar(50),
+    ActivityDate datetime
+);
+Configure IIS:
+Enable Classic ASP
+Set up application pool
+Configure security settings

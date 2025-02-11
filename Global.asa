@@ -1,0 +1,12 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart
+    Application("dbConnection") = "Provider=SQLOLEDB;Server=localhost;Database=SecurityDB;UID=user;PWD=pass;"
+    Application("AIEndpoint") = "https://api.openai.com/v1/chat/completions"
+    Application("APIKey") = "your-api-key"
+End Sub
+
+Sub Session_OnStart
+    Session.Timeout = 20
+    Session("UserAuthenticated") = False
+End Sub
+</SCRIPT>
